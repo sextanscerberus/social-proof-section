@@ -11,14 +11,12 @@ body {
 	font-size: 15px;
 	color: var(--dark-grayish-magenta);
 	text-align: center;
+	background: url("../images/bg-pattern-top-mobile.svg") top left;
 }
 
 #component {
+	margin: 2em 0;
 	padding: 0 1em;
-}
-
-#component section {
-	margin: 3em 0;
 }
 
 h1 {
@@ -57,7 +55,7 @@ h2 {
 	line-height: 1.5em;
 	text-align: left;
 	color: var(--white);
-	padding: 2.5em 3.5em;
+	padding: 1.5em 2.5em;
 	margin: 1.5em 0;
 	background-color: var(--very-dark-magenta);
 	border-radius: 15px;
@@ -73,5 +71,72 @@ h2 {
 }
 
 #attribution {
-	display: none;
+	font-weight: 500;
+	font-size: 1em;
+	color: var(--very-dark-magenta);
+}
+
+/* media queries */
+@media (min-width: 671px) {
+	#component {
+		margin: 2.5em auto;
+		width: 70%;
+	}
+}
+
+@media (min-width: 800px) {
+	body {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#component {
+		padding: 0;
+		width: 70%;
+		height: 70%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	#product-description {
+		width: 50%;
+		text-align: left;
+	}
+
+	h1 {
+		font-size: 3em;
+	}
+
+	#product-rates {
+		flex-grow: 0.5;
+	}
+
+	.rate-card {
+		display: flex;
+		align-items: baseline;
+		justify-content: flex-start;
+	}
+
+	.rate-card header, .rate-card p {
+		display: inline;
+		margin: 0 1.25em;
+	}
+
+	#user-opinions {
+		margin: 0;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.opinion-card {
+		margin: 0;
+		font-size: 12px;
+		width: 25%;
+	}
+
 }
