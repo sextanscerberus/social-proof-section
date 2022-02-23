@@ -1,0 +1,77 @@
+:root {
+	--very-dark-magenta: hsl(300, 43%, 22%);
+	--soft-pink: hsl(333, 80%, 67%);
+	--dark-grayish-magenta: hsl(303, 10%, 53%);
+	--light-grayish-magenta: hsl(300, 24%, 96%);
+	--white: hsl(0, 0%, 100%);
+}
+
+body {
+	font-family: 'Spartan', sans-serif;
+	font-size: 15px;
+	color: var(--dark-grayish-magenta);
+	text-align: center;
+}
+
+#component {
+	padding: 0 1em;
+}
+
+#component section {
+	margin: 3em 0;
+}
+
+h1 {
+	color: var(--very-dark-magenta);
+}
+
+h2 {
+	font-size: 1em;
+	margin-bottom: 0;
+}
+
+.rate-card {
+	background-color: var(--light-grayish-magenta);
+	margin: 1.5em 0;
+	padding: 1em 0;
+	border-radius: 15px;
+}
+
+.rate-card p {
+	margin-bottom: 0;
+	font-weight: 700;
+	color: var(--very-dark-magenta);
+}
+
+.profile-picture {
+	float: left;
+	border-radius: 50%;
+	max-width: 3em;
+	width: auto;
+	height: auto;
+	margin-right: 2em;
+}
+
+.opinion-card {
+	font-size: 0.9em;
+	line-height: 1.5em;
+	text-align: left;
+	color: var(--white);
+	padding: 2.5em 3.5em;
+	margin: 1.5em 0;
+	background-color: var(--very-dark-magenta);
+	border-radius: 15px;
+}
+
+.opinion-card header {
+	margin-bottom: 2em;
+}
+
+.opinion-card header p {
+	color: var(--soft-pink);
+	margin: 0;
+}
+
+#attribution {
+	display: none;
+}
