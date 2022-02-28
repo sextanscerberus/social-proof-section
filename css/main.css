@@ -11,7 +11,7 @@ body {
 	font-size: 15px;
 	color: var(--dark-grayish-magenta);
 	text-align: center;
-	background: url("../images/bg-pattern-top-mobile.svg") top left;
+	background: url("../images/bg-pattern-top-mobile.svg") top left no-repeat, url("../images/bg-pattern-bottom-mobile.svg") right bottom no-repeat;
 }
 
 #component {
@@ -84,6 +84,7 @@ h2 {
 	}
 }
 
+
 @media (min-width: 800px) {
 	body {
 		height: 100vh;
@@ -91,12 +92,13 @@ h2 {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		background: url("../images/bg-pattern-top-desktop.svg") left top no-repeat, url("../images/bg-pattern-bottom-desktop.svg") right bottom no-repeat;
 	}
 
 	#component {
 		padding: 0;
-		width: 70%;
-		height: 70%;
+		width: 80%;
+		height: 80%;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -104,16 +106,25 @@ h2 {
 	}
 
 	#product-description {
-		width: 50%;
+		width: 40%;
 		text-align: left;
 	}
 
 	h1 {
-		font-size: 3em;
+		font-size: 2.5em;
 	}
 
 	#product-rates {
 		flex-grow: 0.5;
+		margin-right: 1.5em;
+	}
+
+	#product-rates article:first-child {
+		transform: translateX(-1.5em);
+	}
+
+	#product-rates article:last-child {
+		transform: translateX(1.5em);
 	}
 
 	.rate-card {
@@ -133,10 +144,60 @@ h2 {
 		justify-content: space-between;
 	}
 
+	#user-opinions article:first-child {
+		transform: translateY(-1em);
+	}
+
+	#user-opinions article:last-child {
+		transform: translateY(1em);
+	}
+
 	.opinion-card {
 		margin: 0;
 		font-size: 12px;
 		width: 25%;
 	}
 
+	#attribution {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+@media (min-width: 1168px) {
+	#component {
+		width: 75%;
+		height: 65%;
+	}
+
+	#product-description {
+		width: 50%;
+	}
+
+	h1 {
+		font-size: 3em;
+	}
+
+	#product-rates {
+		margin-right: 2.5em;
+	}
+
+	#product-rates article:first-child {
+		transform: translateX(-2.5em);
+	}
+
+	#product-rates article:last-child {
+		transform: translateX(2.5em);
+	}
+
+
+	#user-opinions article:first-child {
+		transform: translateY(-1.25em);
+	}
+
+	#user-opinions article:last-child {
+		transform: translateY(1.25em);
+	}
 }
